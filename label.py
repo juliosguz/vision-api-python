@@ -30,10 +30,10 @@ def main(photo_file):
         })
         response = service_request.execute()
         count = 0
-        while (count < 9):
+        while (count < 10):
             label = response['responses'][0]['labelAnnotations'][count]['description']
             count = count + 1
-            print('Found label: %s for %s' % (label, photo_file))
+            print('%s Label encontrado : %s para %s' % (count, label, photo_file))
         return 0
 
 if __name__ == '__main__':
